@@ -14,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace OnShopServer.Catalog
 {
+    using Data;
+    using Microsoft.EntityFrameworkCore;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -28,6 +31,15 @@ namespace OnShopServer.Catalog
         {
 
             services.AddControllers();
+            services.AddDbContext<CatalogDbContext>(options => options
+                .UseSqlServer(
+                    this.Configuration.GetConnectionString("DefaultConnection"),
+                    sqlOptions => sqlOptions
+                        .EnableRetryOnFailure(
+                            maxRetryCount: 10,
+                            maxRetryDelay: TimeSpan.FromSeconds(30),
+                            errorNumbersToAdd: null)));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OnShopServer.Catalog", Version = "v1" });
@@ -43,6 +55,13 @@ namespace OnShopServer.Catalog
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnShopServer.Catalog v1"));
             }
+
+            using var serviceScope = app.ApplicationServices.CreateScope();
+            var serviceProvider = serviceScope.ServiceProvider;
+
+            var db = serviceProvider.GetRequiredService<DbContext>();
+
+            db.Database.Migrate();
 
             app.UseHttpsRedirection();
 
