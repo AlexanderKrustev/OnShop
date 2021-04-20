@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z++lHiI0IklVINNYm6M//L3KspERfRA3bIsJqlu/LBlPK9KXZq4H4e54ckoBRg14d2yaYu6gVQ/FCPBhjQPL8A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\a.krustev\\Google Drive\\repos\\OneShop\\Server\\OnShopServer\\OnShopServer.Orders\\OnShopServer.Orders.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a.krustev\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\a.krustev\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\a.krustev\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512",
+    "C:\\Users\\a.krustev\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\a.krustev\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\a.krustev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\a.krustev\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
